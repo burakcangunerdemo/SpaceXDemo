@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rocketsFragment">
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.demospacex.view.fragment.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_rocketDetailFragment"
+            app:destination="@id/rocketDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketsFragment"
+        android:name="com.example.demospacex.view.fragment.rocket.RocketsFragment"
+        android:label="fragment_rockets"
+        tools:layout="@layout/fragment_rockets" >
+        <action
+            android:id="@+id/action_rocketsFragment_to_rocketDetailFragment"
+            app:destination="@id/rocketDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.example.demospacex.view.fragment.upcomingRocket.UpcomingRocketsFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming_rockets" >
+        <action
+            android:id="@+id/action_upcomingFragment_to_upcomingDetailFragment"
+            app:destination="@id/upcomingDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingDetailFragment"
+        android:name="com.example.demospacex.view.fragment.upcomingRocket.UpcomingDetailFragment"
+        android:label="fragment_upcoming_detail"
+        tools:layout="@layout/fragment_upcoming_detail" >
+        <argument
+            android:name="rocket"
+            app:argType="com.example.demospacex.models.UpcomingRocketsItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketDetailFragment"
+        android:name="com.example.demospacex.view.fragment.rocket.RocketDetailFragment"
+        android:label="fragment_rocket_detail"
+        tools:layout="@layout/fragment_rocket_detail">
+        <argument
+            android:name="rocket"
+            app:argType="com.example.demospacex.models.RocketsItem" />
+    </fragment>
+</navigation>

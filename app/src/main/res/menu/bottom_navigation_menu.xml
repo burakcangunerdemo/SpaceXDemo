@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Rockets"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/rocketsFragment"/>
+    <item android:title="Favorite Rockets"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:id="@+id/favoriteFragment"/>
+    <item android:title="Upcoming Launches"
+        android:icon="@drawable/ic_baseline_upcoming_24"
+        android:id="@+id/upcomingFragment"/>
+</menu>
